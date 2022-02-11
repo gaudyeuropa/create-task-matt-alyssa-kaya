@@ -1,4 +1,4 @@
-let mySprite = sprites.create(img`
+let chef = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
