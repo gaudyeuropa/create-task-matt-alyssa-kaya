@@ -6,15 +6,29 @@ function displayMenu (menuNumber: number) {
             veganCourses.removeAt(veganCourses.indexOf(veganRecommendation))
         }
     } else if (menuNumber == 2) {
-    	
+        for (let index = 0; index < 2; index++) {
+            pescatarianRecommendation = pescatarianCourses._pickRandom()
+            game.splash(pescatarianRecommendation)
+            pescatarianCourses.removeAt(pescatarianCourses.indexOf(pescatarianRecommendation))
+        }
     } else if (menuNumber == 3) {
+        for (let index = 0; index < 2; index++) {
+            normalRecommendation = normalCourses._pickRandom()
+            game.splash(normalRecommendation)
+            normalCourses.removeAt(normalCourses.indexOf(normalRecommendation))
+        }
+    } else {
     	
     }
 }
+let normalRecommendation = ""
+let pescatarianRecommendation = ""
 let veganRecommendation = ""
+let normalCourses: string[] = []
+let pescatarianCourses: string[] = []
 let veganCourses: string[] = []
 game.showLongText("Hi! Welcome to Viva la Special! We offer inclusive options for those with dietary restrictions!", DialogLayout.Bottom)
-let dietaryRestrictions = game.askForNumber("", 3)
+let dietaryRestrictions = game.askForNumber("(1) Vegan (2) Pescatarian (3) No restrictions", 3)
 let chef = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . 7 3 3 3 3 3 3 3 . 
@@ -40,7 +54,7 @@ veganCourses = [
 "Vegan Curry",
 "Red leaf"
 ]
-let normalCourses = [
+pescatarianCourses = [
 "Grilled Swordfish",
 "Blackened Salmon",
 "Tuna Tartare",
