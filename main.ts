@@ -40,4 +40,18 @@ veganCourses = [
 "Vegan Curry",
 "Red leaf"
 ]
+let normalCourses = [
+"Grilled Swordfish",
+"Blackened Salmon",
+"Tuna Tartare",
+"Nigiri",
+"Scallop salad"
+]
+normalCourses = [
+"Mac & Cheese",
+"Burger & Fries",
+"Chicken Parmesian",
+"Turkey Sandwich",
+"Steak & Potatoes"
+]
 displayMenu(dietaryRestrictions)
