@@ -19,6 +19,7 @@ function displayMenu (menuNumber: number) {
         }
     } else {
         chef.startEffect(effects.fire)
+        chef.sayText("Invalid input! Try again.")
     }
 }
 let normalRecommendation = ""
