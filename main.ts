@@ -4,18 +4,21 @@ function displayMenu (menuNumber: number) {
             veganRecommendation = veganCourses._pickRandom()
             chef.sayText(veganRecommendation)
             veganCourses.removeAt(veganCourses.indexOf(veganRecommendation))
+            pause(2000)
         }
     } else if (menuNumber == 2) {
         for (let index = 0; index < 2; index++) {
             pescatarianRecommendation = pescatarianCourses._pickRandom()
             chef.sayText(pescatarianRecommendation)
             pescatarianCourses.removeAt(pescatarianCourses.indexOf(pescatarianRecommendation))
+            pause(2000)
         }
     } else if (menuNumber == 3) {
         for (let index = 0; index < 2; index++) {
             normalRecommendation = normalCourses._pickRandom()
             chef.sayText(normalRecommendation)
             normalCourses.removeAt(normalCourses.indexOf(normalRecommendation))
+            pause(2000)
         }
     } else {
         chef.startEffect(effects.fire)
