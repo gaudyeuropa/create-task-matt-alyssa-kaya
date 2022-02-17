@@ -1,5 +1,6 @@
 function displayMenu (menuNumber: number) {
     if (menuNumber == 1) {
+        // generates two random menu options from user's desired menu
         for (let index = 0; index < 2; index++) {
             veganRecommendation = veganCourses._pickRandom()
             chef.sayText(veganRecommendation)
@@ -7,6 +8,7 @@ function displayMenu (menuNumber: number) {
             pause(2000)
         }
     } else if (menuNumber == 2) {
+        // generates two random menu options from user's desired menu
         for (let index = 0; index < 2; index++) {
             pescatarianRecommendation = pescatarianCourses._pickRandom()
             chef.sayText(pescatarianRecommendation)
@@ -14,6 +16,7 @@ function displayMenu (menuNumber: number) {
             pause(2000)
         }
     } else if (menuNumber == 3) {
+        // generates two random menu options from user's desired menu
         for (let index = 0; index < 2; index++) {
             normalRecommendation = normalCourses._pickRandom()
             chef.sayText(normalRecommendation)
@@ -22,6 +25,7 @@ function displayMenu (menuNumber: number) {
         }
     } else {
         chef.startEffect(effects.fire)
+        // chef says this if the user enters a number other than 1, 2, or 3
         chef.sayText("Invalid input! Try again.")
     }
 }
@@ -199,6 +203,7 @@ game.setDialogFrame(img`
     ..........................................
     ..........................................
     `)
+// prompts the user to enter the corresponding number for their desired menu
 let dietaryRestrictions = game.askForNumber("(1) Vegan (2) Pescatarian (3) No restrictions", 3)
 chef = sprites.create(img`
     ..............................
@@ -232,6 +237,7 @@ chef = sprites.create(img`
     ........fff.....fff...........
     ..............................
     `, SpriteKind.Player)
+// lists all possible vegan menu options
 veganCourses = [
 "Vegan Chicken Nuggets",
 "Tofu Power Bowl",
@@ -239,6 +245,7 @@ veganCourses = [
 "Vegan Curry",
 "Red leaf"
 ]
+// lists all possible pescatarian menu options
 pescatarianCourses = [
 "Grilled Swordfish",
 "Blackened Salmon",
@@ -246,6 +253,7 @@ pescatarianCourses = [
 "Nigiri",
 "Scallop salad"
 ]
+// lists all possible no restriction menu options
 normalCourses = [
 "Mac & Cheese",
 "Burger & Fries",
@@ -253,4 +261,5 @@ normalCourses = [
 "Turkey Sandwich",
 "Steak & Potatoes"
 ]
+// calls the "displayMenu" function which provides the user with two meal options from their desired menu
 displayMenu(dietaryRestrictions)
